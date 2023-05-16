@@ -25,7 +25,8 @@ const simplified = nums.map(function (num) { return num * 2 });
 console.log(simplified);
 
 // Simplfied w/ map() + arrow function
-
+const arrow = nums.map(num => num * 2);
+console.log(arrow);
 
 // With objects:
 const students = [
@@ -35,12 +36,14 @@ const students = [
     profession: 'Developer',
     skill: 'JavaScript'
   },
+
   {
     id: 2,
     name: 'Ariel',
     profession: 'Developer',
     skill: 'HTML'
   },
+
   {
     id: 3,
     name: 'Jason',
@@ -48,3 +51,7 @@ const students = [
     skill: 'CSS'
   },
 ];
+
+const studentsWithIds = students.map(student => [student.name, student.id]);
+console.log(studentsWithIds);
+
